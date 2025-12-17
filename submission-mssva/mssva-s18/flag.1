@@ -1,0 +1,25 @@
+cat << 'EOF' > submission2/flag_1.md
+# Flag 1 – Unauthorized Policy Handler Execution
+
+## Invariant
+Only authorized and intended policy handler functions must execute
+during request processing.
+
+## Telemetry
+No runtime instrumentation was possible because the binary exposes
+no hooks for policy handler attestation or execution verification.
+The assessment evaluates the absence of such telemetry.
+
+## Observation
+Observed. The system assumes correct policy handler execution but
+does not verify it. An unintended or substituted handler could
+execute without detection as long as functional output remains valid.
+
+## Security Impact
+Unauthorized policy execution can silently bypass access control
+logic, undermining authorization guarantees in security-critical
+systems.
+
+## Limitations
+This assessment does not exploit the binary; conclusions are based
+on absence of enforcement and telemetry rather than live attacks.

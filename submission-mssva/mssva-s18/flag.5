@@ -1,0 +1,23 @@
+cat << 'EOF' > submission2/flag_5.md
+# Flag 5 – Unobserved Execution Path Activation
+
+## Invariant
+All security-relevant execution paths must be observable and
+verifiable.
+
+## Telemetry
+The binary emits functional logs but lacks execution-path telemetry
+such as path hashing or runtime measurements.
+
+## Observation
+Observed. Execution paths can activate without being observed or
+verified by monitoring systems.
+
+## Security Impact
+Unobserved execution paths enable persistent compromise while the
+system appears healthy and correct.
+
+## Limitations
+This assessment focuses on telemetry absence rather than execution
+path tracing.
+

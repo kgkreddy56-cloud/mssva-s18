@@ -1,0 +1,26 @@
+cat << 'EOF' > submission2/flag_2.md
+# Flag 2 – Return Address Integrity Violation
+
+## Invariant
+Functions must return execution only to their legitimate caller
+return addresses.
+
+## Telemetry
+The binary provides no shadow stack, return address validation, or
+control-flow integrity instrumentation. The assessment evaluates
+this absence of telemetry.
+
+## Observation
+Observed. Return addresses are not validated at runtime, allowing
+control flow redirection without crashes or alerts.
+
+## Security Impact
+Return address manipulation enables control-flow hijacking that can
+alter execution logic while preserving outwardly correct behavior.
+
+## Limitations
+No exploit was demonstrated; findings are derived from missing
+runtime protections.
+
+## Submission Method
+

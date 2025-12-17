@@ -1,0 +1,22 @@
+cat << 'EOF' > submission2/flag_4.md
+# Flag 4 – Non-Linear Control Transfer Abuse
+
+## Invariant
+Control flow should follow a predictable and intended execution
+structure.
+
+## Telemetry
+The system emits no telemetry validating indirect branches, jump
+targets, or non-linear control transfers.
+
+## Observation
+Observed. Unexpected control transfers are not detected or
+restricted by the runtime.
+
+## Security Impact
+Non-linear control flow abuse enables logic skipping and policy
+bypass without impacting service availability.
+
+## Limitations
+This assessment relies on absence of enforcement rather than runtime
+trace evidence.

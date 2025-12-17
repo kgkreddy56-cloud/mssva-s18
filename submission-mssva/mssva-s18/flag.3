@@ -1,0 +1,23 @@
+cat << 'EOF' > submission2/flag_3.md
+# Flag 3 – Runtime Function Resolution Tampering
+
+## Invariant
+Runtime function resolution must bind only trusted and expected
+implementations.
+
+## Telemetry
+No telemetry exists to verify runtime symbol resolution or function
+pointer integrity. The assessment evaluates this lack of verification.
+
+## Observation
+Observed. Function resolution occurs without validation, allowing
+tampered or redirected bindings to execute unnoticed.
+
+## Security Impact
+Tampered function resolution enables malicious logic execution
+without altering visible control flow or output.
+
+## Limitations
+Dynamic loader behavior is inferred through design analysis rather
+than active instrumentation.
+
